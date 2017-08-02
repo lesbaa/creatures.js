@@ -1,0 +1,60 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+    }
+  },
+  // "extends": "airbnb",
+    // full list of airbnb rules here => https://gist.github.com/eddywashere/3ad627a827ece50e349a
+  "rules": {
+    // semi colons are now illegal
+    "semi": ["error", "never"],
+    // throw error if callbacks don"t deal with errors"
+    "handle-callback-err": ["error"," ^(err|error|^.+Error)$"],
+    // should return at the end of callbacks 
+    // "eslint callback-return": "error"
+    // error on inconsistent spacing
+    "indent": ["error", 2],
+    // enforce comma dangling
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "ignore"
+    }],
+    // ensure all variables are declared at the beginning of the code
+    // "vars-on-top": "error",
+    // tidy trailing spaces
+    "no-trailing-spaces": "error",
+    // disallow undefined variables
+    "no-undefined": "error",
+    // disallow declaration of variables that are not usedm except global variables / imports
+    "no-unused-vars": ["error", {"vars": "local", "args": "none"}],
+    // use double quotes in jsx
+    "jsx-quotes": ["error", "prefer-double"],
+    // allow jsx or js files for components
+    // "react/jsx-filename-extension": [2, {"extensions": [".js", ".jsx"]}],
+    // don't mutate arguments
+    "no-param-reassign": ["error", { "props": true }],
+    "global-require": 0,
+    "import/no-extraneous-dependencies": 0,
+    // "import/no-unresolved": 0,
+    "import/extensions": 0,
+    // absolute paths resolve to /app so warnings are not needed
+    "import/no-absolute-path": 0,
+    "class-methods-use-this": 0,
+    "react/forbid-prop-types": 0,
+    "react/require-default-props": 0,
+    "no-use-before-define": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}
