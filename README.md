@@ -11,10 +11,12 @@ The main goal of this project is to create an environment where "creatures" live
 
 The intention is to provide creatures with the ability to :
 
- * move ✔✅
+ * move ✅
  * eat / hunt ✅
  * poo, yes i said poo.
  * breed
+ * die and leave behind edible remains ✅
+ * hunt other creatures
  * sense ✅ (to a degree)
  * interact with their environment
  * ideally evolve over time
